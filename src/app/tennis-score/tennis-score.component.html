@@ -4,23 +4,23 @@
     <h2>Enter player name</h2>
     <div>
       <input type="text" #box1 name="fname" placeholder="Player 1 name" />
-      <button (click)="getValue1(box1.value)">Enter player 1</button
+      <button (click)="addFirstPlayerName(box1.value)">Enter player 1</button
       ><br /><br />
     </div>
     <div>
       <input type="text" #box2 name="lname" placeholder="Player 2 name" />
-      <button (click)="getValue2(box2.value)">Enter player 2</button
+      <button (click)="addSecondPlayerName(box2.value)">Enter player 2</button
       ><br /><br />
     </div>
   </div>
   <div>
     <h2>Your players are:</h2>
-    <button (click)="showMessageSoon()" class="player-names">
-      <span class="icon">🎾</span> {{ displayValue1 }}
+    <button (click)="increaseFirstPlayerResult()" class="player-names">
+      <span class="icon">🎾</span> {{ firstPlayerName }}
       <span class="icon">🎾</span>
     </button>
-    <button class="player-names">
-      <span class="icon">🥎</span> {{ displayValue2 }}
+    <button class="player-names" (click)="increaseSecondPlayerResult()">
+      <span class="icon">🥎</span> {{ secondPlayerName }}
       <span class="icon">🥎</span>
     </button>
   </div>
@@ -31,8 +31,8 @@
     </h2>
   </div>
   <div>
-    <h2 *ngIf="showMyMessage">
-      {{ displayValue1 }} 15 - {{ displayValue2 }} 0
+    <h2>
+      {{firstPlayerScore }}  {{secondPlayerScore}}
     </h2>
   </div>
 </div>
