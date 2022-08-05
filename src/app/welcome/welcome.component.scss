@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-welcome {
+    font-family: "Shalimar", cursive;
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    padding: 0 50px;
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+  }
+  &-author {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bolder;
+    &-name {
+      font-size: 64px;
+      font-family: "Shalimar", cursive;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+.img-container {
+  height: 30vh;
+  min-width: 50%;
+  background-image: url(../assets/img/welcome.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-weight: bolder;
+  &:link,
+  &:visited {
+    font-size: 32px;
+    color: #fff;
+  }
+  &:hover,
+  &:active {
+    color: rgba(44, 137, 137, 0.7);
+  }
+}

@@ -1,0 +1,38 @@
+<div class="card">
+  <p class="card-tennis">Tennis score!</p>
+  <div class="card-input-fields">
+    <h2>Enter player name</h2>
+    <div>
+      <input type="text" #box1 name="fname" placeholder="Player 1 name" />
+      <button (click)="getValue1(box1.value)">Enter player 1</button
+      ><br /><br />
+    </div>
+    <div>
+      <input type="text" #box2 name="lname" placeholder="Player 2 name" />
+      <button (click)="getValue2(box2.value)">Enter player 2</button
+      ><br /><br />
+    </div>
+  </div>
+  <div>
+    <h2>Your players are:</h2>
+    <button (click)="showMessageSoon()" class="player-names">
+      <span class="icon">🎾</span> {{ displayValue1 }}
+      <span class="icon">🎾</span>
+    </button>
+    <button class="player-names">
+      <span class="icon">🥎</span> {{ displayValue2 }}
+      <span class="icon">🥎</span>
+    </button>
+  </div>
+  <div>
+    <h2>
+      One click on player button means one point in a game, see result down
+      bellow
+    </h2>
+  </div>
+  <div>
+    <h2 *ngIf="showMyMessage">
+      {{ displayValue1 }} 15 - {{ displayValue2 }} 0
+    </h2>
+  </div>
+</div>

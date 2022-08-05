@@ -1,13 +1,15 @@
 .btn {
-  padding: 20px;
+  padding: 30px;
   font-size: 25px;
-  transition: all 0.5s;
+  transition: all 1s;
+  width: 300px;
   border-radius: 20px;
-  border: none;
+  border: 1px solid rgb(44, 137, 137);
+  cursor: pointer;
 
   &-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     width: 100%;
     align-items: center;
@@ -15,6 +17,7 @@
   &:hover {
     background-color: rgb(44, 137, 137);
     color: rgb(255, 255, 255);
-    width: 20%;
+    outline-offset: 3px;
+    outline: 1px solid;
   }
 }
